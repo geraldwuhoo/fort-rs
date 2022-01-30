@@ -12,7 +12,7 @@ pub enum PasswordGeneratorAlgo {
     Sha3,
 }
 
-pub enum PasswordGeneratorHmac {
+enum PasswordGeneratorHmac {
     HmacSha512(Hmac<Sha512>),
     HmacSha3(Hmac<Sha3_512>),
 }
@@ -23,7 +23,7 @@ pub struct PasswordGenerator {
 }
 
 impl PasswordGeneratorHmac {
-    pub fn new(algo: PasswordGeneratorAlgo, key: &str) -> Result<Self> {
+    fn new(algo: PasswordGeneratorAlgo, key: &str) -> Result<Self> {
         // Create master key for Hmac
         let mut master_key: [u8; 64] = [0; 64];
         let (log_n, r, p) = (15, 8, 2);
