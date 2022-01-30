@@ -9,5 +9,5 @@ edition = "2021"
 scrypt = "0.8"
 hmac = {version = "0.11", features = ["std"]}
 sha2 = "0.9" 
+sha3 = "0.9"
 anyhow = "1.0"
-log = "0.4"
