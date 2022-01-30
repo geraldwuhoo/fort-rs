@@ -6,6 +6,13 @@
     <title>fort-rs</title>
   </head>
   <body>
+    <input type="text" placeholder="Master password" id="master">
+    <button type="button" id="initialize">Initialize</button>
+    <input type="text" placeholder="Site" id="site" hidden>
+    <form id="options"></form>
+    <input type="range" min="8" max="64" value="64" class="slider" id="length" hidden>
+    <span id="lengthValue"></span>
+    <div id="password"></div>
     <script src="./index.js" type="module"></script>
   </body>
 </html>
