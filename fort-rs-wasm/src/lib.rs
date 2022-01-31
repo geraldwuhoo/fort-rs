@@ -19,7 +19,7 @@ impl PasswordGeneratorJs {
         };
 
         // Create password generator and list of template names
-        let password_generator = match PasswordGenerator::new(algo_enum, key) {
+        let password_generator = match PasswordGenerator::new(algo_enum, key, None) {
             Ok(gen) => gen,
             Err(_) => return Err(JsError::new("Failed to create password generator")),
         };
@@ -35,8 +35,8 @@ impl PasswordGeneratorJs {
         })
     }
 
-    pub fn create_site_password(&mut self, seed: &str, options: &str) -> Result<String, JsError> {
-        match self.password_generator.create_site_password(seed, options) {
+    pub fn create_site_password(&mut self, seed: &str, template_name: &str) -> Result<String, JsError> {
+        match self.password_generator.create_site_password_raw(seed, 0, template_name, 64) {
             Ok(s) => Ok(s),
             Err(_) => Err(JsError::new("Unable to create site password")),
         }
