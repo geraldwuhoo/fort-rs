@@ -76,7 +76,7 @@ init().then(() => {
   }
 
   document.getElementById("initialize").addEventListener("click", initialize_password_generator);
-  document.getElementById("initialize").addEventListener("keyup", e => {
+  document.getElementById("master").addEventListener("keyup", e => {
     if (e.key === 'Enter') {
       initialize_password_generator();
     }
