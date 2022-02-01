@@ -1,6 +1,6 @@
 use wasm_bindgen::prelude::*;
 
-use fort_rs::{PasswordGenerator, PasswordGeneratorAlgo};
+use fort_rs_core::{PasswordGenerator, PasswordGeneratorAlgo};
 
 #[wasm_bindgen]
 pub struct PasswordGeneratorJs {

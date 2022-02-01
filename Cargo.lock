@@ -168,6 +168,28 @@ version = "0.1.0"
 dependencies = [
  "anyhow",
  "clap",
+ "fort-rs-core",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "fort-rs-bin"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
+ "fort-rs-core",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "fort-rs-core"
+version = "0.1.0"
+dependencies = [
+ "anyhow",
+ "clap",
  "hmac 0.11.0",
  "scrypt",
  "serde",
@@ -180,7 +202,7 @@ dependencies = [
 name = "fort-rs-wasm"
 version = "0.1.0"
 dependencies = [
- "fort-rs",
+ "fort-rs-core",
  "getrandom",
  "wasm-bindgen",
 ]

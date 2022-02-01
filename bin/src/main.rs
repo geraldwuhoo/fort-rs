@@ -1,6 +1,6 @@
 use anyhow::Result;
 use clap::Parser;
-use fort_rs::{PasswordGenerator, PasswordGeneratorAlgo, Site};
+use fort_rs_core::{PasswordGenerator, PasswordGeneratorAlgo, Site};
 use std::{collections::HashMap, fs::File, io};
 
 #[derive(Parser, Debug)]
