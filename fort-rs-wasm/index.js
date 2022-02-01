@@ -76,6 +76,11 @@ init().then(() => {
   }
 
   document.getElementById("initialize").addEventListener("click", initialize_password_generator);
+  document.getElementById("initialize").addEventListener("keyup", e => {
+    if (e.key === 'Enter') {
+      initialize_password_generator();
+    }
+  });
   document.getElementById("site").addEventListener("keyup", create_site_password);
   document.getElementById("length").addEventListener("input", adjust_length);
 });
